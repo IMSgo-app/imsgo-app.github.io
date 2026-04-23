@@ -580,6 +580,102 @@ img {
     margin-bottom: 20px;
 }
 
+.kids-age-disclosure {
+    border-radius: 30px;
+}
+
+.kids-age-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.kids-age-summary::-webkit-details-marker {
+    display: none;
+}
+
+.kids-age-summary-main {
+    display: grid;
+    gap: 14px;
+}
+
+.kids-age-summary h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.55rem, 3vw, 2rem);
+}
+
+.kids-age-summary-side {
+    display: grid;
+    gap: 10px;
+    justify-items: end;
+    flex-shrink: 0;
+}
+
+.kids-age-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.kids-age-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(28, 28, 30, 0.08);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.kids-age-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(28, 28, 30, 0.08);
+    color: var(--text-dark);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.kids-age-toggle::before {
+    content: "Öffnen";
+}
+
+.kids-age-toggle::after {
+    content: "+";
+    margin-left: 8px;
+    font-size: 17px;
+    line-height: 1;
+}
+
+.kids-age-disclosure[open] .kids-age-toggle::before {
+    content: "Zuklappen";
+}
+
+.kids-age-disclosure[open] .kids-age-toggle::after {
+    content: "−";
+}
+
+.kids-age-disclosure[open] .kids-age-toggle {
+    background: rgba(28, 28, 30, 0.14);
+}
+
+.kids-age-panel {
+    margin-top: 24px;
+}
+
 .kids-age-head h3,
 .kids-type-header h4,
 .kids-track-title {
@@ -857,6 +953,18 @@ img {
 
 .team-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 860px) {
+    .kids-age-summary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .kids-age-summary-side {
+        width: 100%;
+        justify-items: start;
+    }
 }
 
 .team-card {

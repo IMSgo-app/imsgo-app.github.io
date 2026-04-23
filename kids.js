@@ -16,8 +16,11 @@ function renderKidsPageLibrary() {
     }
 
     const markup = kidsAudioLibrary
-        .map((ageGroup) => {
+        .map((ageGroup, index) => {
             const trackCount = ageGroup.groups.reduce((count, group) => count + group.items.length, 0);
+            const groupLabels = ageGroup.groups
+                .map((group) => `<span class="kids-age-chip">${group.title}</span>`)
+                .join('');
 
             const groupsMarkup = ageGroup.groups
                 .map((group) => {
@@ -70,14 +73,26 @@ function renderKidsPageLibrary() {
 
             return `
                 <section class="kids-age-card kids-age-card-${ageGroup.ageKey}" id="age-${ageGroup.ageKey}">
-                    <div class="kids-age-head">
-                        <div>
-                            <h2>${ageGroup.ageGroup}</h2>
-                            <p class="kids-track-description">${ageGroup.description}</p>
+                    <details class="kids-age-disclosure" ${index === 0 ? 'open' : ''}>
+                        <summary class="kids-age-summary">
+                            <div class="kids-age-summary-main">
+                                <div>
+                                    <h2>${ageGroup.ageGroup}</h2>
+                                    <p class="kids-track-description">${ageGroup.description}</p>
+                                </div>
+                                <div class="kids-age-chip-row">
+                                    ${groupLabels}
+                                </div>
+                            </div>
+                            <div class="kids-age-summary-side">
+                                <div class="kids-age-count">${trackCount} Hörspiele</div>
+                                <span class="kids-age-toggle" aria-hidden="true"></span>
+                            </div>
+                        </summary>
+                        <div class="kids-age-panel">
+                            ${groupsMarkup}
                         </div>
-                        <div class="kids-age-count">${trackCount} Hörspiele</div>
-                    </div>
-                    ${groupsMarkup}
+                    </details>
                 </section>
             `;
         })
@@ -86,11 +101,34 @@ function renderKidsPageLibrary() {
     kidsPageLibrary.innerHTML = markup;
 }
 
+function openAgeGroupFromHash() {
+    const hash = window.location.hash;
+
+    if (!hash || !hash.startsWith('#age-')) {
+        return;
+    }
+
+    const ageCard = document.querySelector(hash);
+
+    if (!ageCard) {
+        return;
+    }
+
+    const disclosure = ageCard.querySelector('.kids-age-disclosure');
+
+    if (disclosure) {
+        disclosure.open = true;
+    }
+}
+
 if (yearTarget) {
     yearTarget.textContent = String(new Date().getFullYear());
 }
 
 renderKidsPageLibrary();
+openAgeGroupFromHash();
+
+window.addEventListener('hashchange', openAgeGroupFromHash);
 
 const observer = new IntersectionObserver(
     (entries) => {
