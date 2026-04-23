@@ -273,6 +273,13 @@ img {
     margin-bottom: 28px;
 }
 
+.section-intro {
+    margin: 14px 0 0;
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
 .section-heading h2 {
     margin: 0;
     font-size: clamp(2rem, 4.5vw, 3.2rem);
@@ -280,10 +287,163 @@ img {
 }
 
 .feature-grid,
+.kids-library,
 .content-grid,
 .team-grid {
     display: grid;
     gap: 24px;
+}
+
+.kids-section {
+    padding-top: 10px;
+}
+
+.kids-panel,
+.kids-age-card,
+.kids-track-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+
+.kids-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px;
+    background: linear-gradient(180deg, rgba(255, 235, 59, 0.18), rgba(255, 255, 255, 0.96));
+}
+
+.kids-copy p {
+    margin: 0;
+    color: var(--text-light);
+}
+
+.kids-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kids-points li,
+.kids-badge,
+.kids-type-badge {
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.kids-points li {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 152, 0, 0.14);
+}
+
+.kids-badge {
+    min-width: max-content;
+    background: #111111;
+    color: #ffffff;
+}
+
+.kids-library {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+}
+
+.kids-age-card {
+    padding: 28px;
+}
+
+.kids-age-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.kids-age-head h3,
+.kids-type-header h4,
+.kids-track-title {
+    margin: 0;
+}
+
+.kids-age-count {
+    color: var(--text-light);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.kids-type-group + .kids-type-group {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(28, 28, 30, 0.08);
+}
+
+.kids-type-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.kids-type-badge {
+    background: rgba(255, 235, 59, 0.3);
+    color: #7a5900;
+}
+
+.kids-track-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.kids-track-card {
+    padding: 18px;
+}
+
+.kids-track-meta {
+    margin: 8px 0 14px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.kids-audio {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.kids-track-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
+.kids-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.kids-link-primary {
+    color: #ffffff;
+    background: linear-gradient(135deg, #1c1c1e, #4a4a4f);
+}
+
+.kids-link-secondary {
+    border: 1px solid rgba(28, 28, 30, 0.1);
+    background: rgba(255, 255, 255, 0.92);
 }
 
 .feature-grid {
@@ -577,6 +737,7 @@ img {
 
 @media (max-width: 920px) {
     .hero-inner,
+    .kids-track-grid,
     .feature-grid,
     .content-grid,
     .team-grid {
@@ -605,10 +766,17 @@ img {
     }
 
     .hero-inner,
+    .kids-panel,
     .feature-card,
     .content-card,
     .team-card {
         padding: 22px;
+    }
+
+    .kids-panel,
+    .kids-age-head {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .store-buttons {
