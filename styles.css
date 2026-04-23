@@ -1241,11 +1241,24 @@ img {
 
     .kids-page-topbar {
         border-radius: 28px;
-        flex-wrap: wrap;
     }
 }
 
 @media (max-width: 520px) {
+    .kids-page-back {
+        display: none;
+    }
+
+    .kids-page-topbar {
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .kids-page-nav a {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
+
     .section {
         width: min(100% - 1rem, 1120px);
         padding: 40px 0;
