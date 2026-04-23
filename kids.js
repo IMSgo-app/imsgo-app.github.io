@@ -65,7 +65,7 @@ function renderKidsPageLibrary() {
 
             return `
                 <section class="kids-age-card kids-age-card-${ageGroup.ageKey}" id="age-${ageGroup.ageKey}">
-                    <details class="kids-age-disclosure" ${index === 0 ? 'open' : ''}>
+                    <details class="kids-age-disclosure">
                         <summary class="kids-age-summary">
                             <div class="kids-age-summary-main">
                                 <div>
