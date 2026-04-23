@@ -5,10 +5,10 @@ const kidsAudioLibrary = window.kidsAudioLibrary || [];
 
 function createTrackDescription(itemTitle, groupTitle, ageGroup) {
     if (groupTitle === 'Pseudostottern') {
-        return `Eine Hoergeschichte fuer ${ageGroup}, in der spielerisches Pseudostottern behutsam erlebbar wird.`;
+        return `Eine Hörgeschichte für ${ageGroup}, in der spielerisches Pseudostottern behutsam erlebbar wird.`;
     }
 
-    return `Eine Hoergeschichte fuer ${ageGroup}, die Techniken in einer ruhigen und kindgerechten Form verankert.`;
+    return `Eine Hörgeschichte für ${ageGroup}, die Techniken in einer ruhigen und kindgerechten Form verankert.`;
 }
 
 function renderKidsPageLibrary() {
@@ -45,7 +45,7 @@ function renderKidsPageLibrary() {
                                         </audio>
                                         <div class="kids-track-actions">
                                             <a class="kids-link kids-link-primary" href="${sourcePath}" download>Herunterladen</a>
-                                            <a class="kids-link kids-link-secondary" href="${sourcePath}" target="_blank" rel="noreferrer">Direkt oeffnen</a>
+                                            <a class="kids-link kids-link-secondary" href="${sourcePath}" target="_blank" rel="noreferrer">Direkt öffnen</a>
                                         </div>
                                     </div>
                                 </article>
@@ -75,7 +75,7 @@ function renderKidsPageLibrary() {
                             <h2>${ageGroup.ageGroup}</h2>
                             <p class="kids-track-description">${ageGroup.description}</p>
                         </div>
-                        <div class="kids-age-count">${trackCount} Hoerspiele</div>
+                        <div class="kids-age-count">${trackCount} Hörspiele</div>
                     </div>
                     ${groupsMarkup}
                 </section>
