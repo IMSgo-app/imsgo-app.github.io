@@ -1283,6 +1283,11 @@ img {
         box-shadow: 0 16px 36px rgba(28, 28, 30, 0.1);
     }
 
+    .kids-page-topbar .menu-toggle,
+    .kids-page-topbar .topbar-menu {
+        display: none;
+    }
+
     .topbar.menu-open .topbar-menu,
     .kids-page-topbar.menu-open .topbar-menu {
         display: flex;
