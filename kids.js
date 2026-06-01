@@ -4,12 +4,105 @@ const kidsAudioLibrary = window.kidsAudioLibrary || [];
 const kidsTopbar = document.querySelector('.kids-page-topbar');
 const kidsMenuToggle = document.querySelector('.menu-toggle');
 
+const chapterPattern = /^Kapitel\s*(\d+)\s*-\s*(.+)$/i;
+
 function createTrackDescription(itemTitle, groupTitle, ageGroup) {
     if (groupTitle === 'Pseudostottern') {
         return `Eine Hörgeschichte für ${ageGroup}, in der spielerisches Pseudostottern behutsam erlebbar wird.`;
     }
 
     return `Eine Hörgeschichte für ${ageGroup}, die Techniken in einer ruhigen und kindgerechten Form verankert.`;
+}
+
+function createMergedItems(items) {
+    const chapterItems = items
+        .map((item) => {
+            const match = item.title.match(chapterPattern);
+
+            if (!match) {
+                return null;
+            }
+
+            return {
+                chapterNumber: Number(match[1]),
+                chapterTitle: match[2],
+                path: item.path
+            };
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.chapterNumber - b.chapterNumber);
+
+    if (chapterItems.length >= 2 && chapterItems.length === items.length) {
+        return [
+            {
+                title: 'Komplette Geschichte',
+                paths: chapterItems.map((chapter) => chapter.path),
+                chapterTitles: chapterItems.map((chapter) => `Kapitel ${chapter.chapterNumber} - ${chapter.chapterTitle}`),
+                isMergedStory: true
+            }
+        ];
+    }
+
+    return items.map((item) => ({
+        title: item.title,
+        paths: [item.path],
+        chapterTitles: [item.title],
+        isMergedStory: false
+    }));
+}
+
+function renderChapterDownloads(item) {
+    if (!item.isMergedStory) {
+        const sourcePath = encodeURI(item.paths[0]);
+        return `<a class="kids-link kids-link-primary" href="${sourcePath}" download>Herunterladen</a>`;
+    }
+
+    const chapterLinks = item.paths
+        .map((path, index) => {
+            const sourcePath = encodeURI(path);
+            const chapterTitle = item.chapterTitles[index];
+            return `<a class="kids-link kids-link-secondary" href="${sourcePath}" download>${chapterTitle}</a>`;
+        })
+        .join('');
+
+    return `
+        <div class="kids-chapter-links" aria-label="Kapitel-Downloads">
+            ${chapterLinks}
+        </div>
+    `;
+}
+
+function setupSequentialPlayback() {
+    document.querySelectorAll('[data-playlist]').forEach((audioElement) => {
+        const playlist = JSON.parse(audioElement.dataset.playlist || '[]');
+
+        if (!playlist.length) {
+            return;
+        }
+
+        let currentIndex = 0;
+
+        audioElement.addEventListener('ended', () => {
+            currentIndex += 1;
+
+            const sourceElement = audioElement.querySelector('source');
+
+            if (!sourceElement) {
+                return;
+            }
+
+            if (currentIndex >= playlist.length) {
+                currentIndex = 0;
+                sourceElement.src = encodeURI(playlist[currentIndex]);
+                audioElement.load();
+                return;
+            }
+
+            sourceElement.src = encodeURI(playlist[currentIndex]);
+            audioElement.load();
+            audioElement.play();
+        });
+    });
 }
 
 function renderKidsPageLibrary() {
@@ -19,17 +112,24 @@ function renderKidsPageLibrary() {
 
     const markup = kidsAudioLibrary
         .map((ageGroup, index) => {
-            const trackCount = ageGroup.groups.reduce((count, group) => count + group.items.length, 0);
+            const mergedGroups = ageGroup.groups.map((group) => ({
+                ...group,
+                mergedItems: createMergedItems(group.items)
+            }));
+
+            const trackCount = mergedGroups.reduce((count, group) => count + group.mergedItems.length, 0);
             const groupLabels = ageGroup.groups
                 .map((group) => `<span class="kids-age-chip">${group.title}</span>`)
                 .join('');
 
-            const groupsMarkup = ageGroup.groups
+            const groupsMarkup = mergedGroups
                 .map((group) => {
-                    const itemsMarkup = group.items
+                    const itemsMarkup = group.mergedItems
                         .map((item) => {
-                            const sourcePath = encodeURI(item.path);
+                            const firstSourcePath = encodeURI(item.paths[0]);
                             const coverImagePath = encodeURI(ageGroup.coverImage);
+                            const chapterInfo = item.isMergedStory ? `<p class="kids-track-description">Alle ${item.paths.length} Kapitel werden automatisch nacheinander abgespielt.</p>` : '';
+                            const playlistData = item.paths.map((path) => path.replace(/"/g, '&quot;'));
 
                             return `
                                 <article class="kids-track-card reveal">
@@ -38,12 +138,13 @@ function renderKidsPageLibrary() {
                                     </div>
                                     <div class="kids-track-body">
                                         <h3 class="kids-track-title">${item.title}</h3>
+                                        ${chapterInfo}
                                         <div class="kids-track-controls">
-                                            <audio class="kids-audio" controls preload="none">
-                                                <source src="${sourcePath}" type="audio/wav">
+                                            <audio class="kids-audio" controls preload="none" data-playlist='${JSON.stringify(playlistData)}'>
+                                                <source src="${firstSourcePath}" type="audio/wav">
                                             </audio>
-                                            <a class="kids-link kids-link-primary" href="${sourcePath}" download>Herunterladen</a>
                                         </div>
+                                        ${renderChapterDownloads(item)}
                                     </div>
                                 </article>
                             `;
@@ -93,6 +194,7 @@ function renderKidsPageLibrary() {
         .join('');
 
     kidsPageLibrary.innerHTML = markup;
+    setupSequentialPlayback();
 }
 
 function openAgeGroupFromHash() {

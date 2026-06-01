@@ -893,6 +893,19 @@ img {
     white-space: nowrap;
 }
 
+.kids-chapter-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.kids-chapter-links .kids-link {
+    min-height: 34px;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
 .kids-link {
     display: inline-flex;
     align-items: center;
