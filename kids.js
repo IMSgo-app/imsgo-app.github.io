@@ -122,16 +122,4 @@ openAgeGroupFromHash();
 
 window.addEventListener('hashchange', openAgeGroupFromHash);
 
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    },
-    { threshold: 0.12 }
-);
-
-document.querySelectorAll('.reveal').forEach((node) => observer.observe(node));
+document.querySelectorAll('.reveal').forEach((node) => node.classList.add('is-visible'));
