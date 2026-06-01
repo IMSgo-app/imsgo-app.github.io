@@ -51,6 +51,14 @@ function createMergedItems(items) {
     }));
 }
 
+function getAudioMimeType(path) {
+    if (path.toLowerCase().endsWith('.m4a')) {
+        return 'audio/mp4';
+    }
+
+    return 'audio/wav';
+}
+
 function renderChapterDownloads(item) {
     if (!item.isMergedStory) {
         const sourcePath = encodeURI(item.paths[0]);
@@ -127,6 +135,7 @@ function renderKidsPageLibrary() {
                     const itemsMarkup = group.mergedItems
                         .map((item) => {
                             const firstSourcePath = encodeURI(item.paths[0]);
+                            const sourceMimeType = getAudioMimeType(item.paths[0]);
                             const coverImagePath = encodeURI(ageGroup.coverImage);
                             const chapterInfo = item.isMergedStory ? `<p class="kids-track-description">Alle ${item.paths.length} Kapitel werden automatisch nacheinander abgespielt.</p>` : '';
                             const playlistData = item.paths.map((path) => path.replace(/"/g, '&quot;'));
@@ -141,7 +150,7 @@ function renderKidsPageLibrary() {
                                         ${chapterInfo}
                                         <div class="kids-track-controls">
                                             <audio class="kids-audio" controls preload="none" data-playlist='${JSON.stringify(playlistData)}'>
-                                                <source src="${firstSourcePath}" type="audio/wav">
+                                                <source src="${firstSourcePath}" type="${sourceMimeType}">
                                             </audio>
                                         </div>
                                         ${renderChapterDownloads(item)}
@@ -241,7 +250,7 @@ if (kidsTopbar && kidsMenuToggle) {
         kidsMenuToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
     });
 
-    kidsTopbar.querySelectorAll('.kids-page-nav a, .kids-page-back').forEach((link) => {
+    kidsTopbar.querySelectorAll('.kids-page-nav a').forEach((link) => {
         link.addEventListener('click', closeMenu);
     });
 

@@ -26,27 +26,13 @@ window.kidsAudioLibrary = [
             {
                 title: 'Techniken',
                 items: [
-                    { title: 'Kapitel 1 - Flora', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Techniken/Kapitel 1 - Flora.wav' },
-                    { title: 'Kapitel 2 - Die Braunbärin', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Techniken/Kapitel 2 - Die Braunb\u00e4rin.wav' },
-                    { title: 'Kapitel 3 - Die Schwalbe', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Techniken/Kapitel 3 - Die Schwalbe.wav' },
-                    { title: 'Kapitel 4 - Die Luchsin', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Techniken/Kapitel 4 - Die Luchsin.wav' },
-                    { title: 'Kapitel 5 - Die Papageien-Dame', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Techniken/Kapitel 5 - Die Papageien-Dame.wav' },
-                    { title: 'Kapitel 6 - Das Reh', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Techniken/Kapitel 6 - Das Reh.wav' },
-                    { title: 'Kapitel 7 - Die Häsin', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Techniken/Kapitel 7 - Die H\u00e4sin.wav' },
-                    { title: 'Kapitel 8 - Zuhause', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Techniken/Kapitel 8 - Zuhause.wav' }
+                    { title: 'Komplette Geschichte', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Techniken/Komplette Geschichte.m4a' }
                 ]
             },
             {
                 title: 'Pseudostottern',
                 items: [
-                    { title: 'Kapitel 1 - Flora', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Pseudostottern/Kapitel 1 - Flora.wav' },
-                    { title: 'Kapitel 2 - Die Braunbärin', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Pseudostottern/Kapitel 2 - Die Braunb\u00e4rin.wav' },
-                    { title: 'Kapitel 3 - Die Schwalbe', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Pseudostottern/Kapitel 3 - Die Schwalbe.wav' },
-                    { title: 'Kapitel 4 - Die Luchsin', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Pseudostottern/Kapitel 4 - Die Luchsin.wav' },
-                    { title: 'Kapitel 5 - Die Papageien-Dame', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Pseudostottern/Kapitel 5 - Die Papageien-Dame.wav' },
-                    { title: 'Kapitel 6 - Das Reh', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Pseudostottern/Kapitel 6 - Das Reh.wav' },
-                    { title: 'Kapitel 7 - Die Häsin', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Pseudostottern/Kapitel 7 - Die H\u00e4sin.wav' },
-                    { title: 'Kapitel 8 - Zuhause', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Pseudostottern/Kapitel 8 - Zuhause.wav' }
+                    { title: 'Komplette Geschichte', path: 'H\u00f6rspiele f\u00fcr stotternde Kinder/H\u00f6rspiele f\u00fcr 4-6-j\u00e4hrige Kinder/Pseudostottern/Komplette Geschichte.m4a' }
                 ]
             }
         ]

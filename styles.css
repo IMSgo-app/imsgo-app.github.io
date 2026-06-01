@@ -1295,10 +1295,6 @@ img {
         gap: 8px;
     }
 
-    .kids-page-nav {
-        display: none;
-    }
-
     .nav-links a,
     .kids-page-nav a,
     .nav-link,
@@ -1308,8 +1304,7 @@ img {
         border-radius: 14px;
     }
 
-    .nav-link,
-    .kids-page-back {
+    .nav-link {
         margin-top: 2px;
     }
 
