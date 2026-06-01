@@ -26,13 +26,23 @@
 <body>
     <header class="topbar">
         <a class="brand" href="#top">IMS Go</a>
-        <nav class="nav-links" aria-label="Seitennavigation">
-            <a href="kids.html">Hörbücher für Kinder</a>
-            <a href="#features">Features</a>
-            <a href="#about">Über IMS Go</a>
-            <a href="#team">Team</a>
-        </nav>
-        <a href="mailto:imsgo@gmx.de" class="nav-link">Fragen? Kontaktieren Sie uns</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+            <span class="menu-toggle-label">Menü</span>
+            <span class="menu-toggle-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <div class="topbar-menu" id="site-menu">
+            <nav class="nav-links" aria-label="Seitennavigation">
+                <a href="kids.html">Hörbücher für Kinder</a>
+                <a href="#features">Features</a>
+                <a href="#about">Über IMS Go</a>
+                <a href="#team">Team</a>
+            </nav>
+            <a href="mailto:imsgo@gmx.de" class="nav-link">Fragen? Kontaktieren Sie uns</a>
+        </div>
     </header>
 
     <main id="top">

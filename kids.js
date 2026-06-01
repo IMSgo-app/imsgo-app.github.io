@@ -1,6 +1,8 @@
 const yearTarget = document.querySelector('#year');
 const kidsPageLibrary = document.querySelector('#kids-page-library');
 const kidsAudioLibrary = window.kidsAudioLibrary || [];
+const kidsTopbar = document.querySelector('.kids-page-topbar');
+const kidsMenuToggle = document.querySelector('.menu-toggle');
 
 function createTrackDescription(itemTitle, groupTitle, ageGroup) {
     if (groupTitle === 'Pseudostottern') {
@@ -123,3 +125,33 @@ openAgeGroupFromHash();
 window.addEventListener('hashchange', openAgeGroupFromHash);
 
 document.querySelectorAll('.reveal').forEach((node) => node.classList.add('is-visible'));
+
+if (kidsTopbar && kidsMenuToggle) {
+    const closeMenu = () => {
+        kidsTopbar.classList.remove('menu-open');
+        kidsMenuToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    kidsMenuToggle.addEventListener('click', () => {
+        const shouldOpen = !kidsTopbar.classList.contains('menu-open');
+
+        kidsTopbar.classList.toggle('menu-open', shouldOpen);
+        kidsMenuToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+    });
+
+    kidsTopbar.querySelectorAll('.kids-page-nav a, .kids-page-back').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!kidsTopbar.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 760) {
+            closeMenu();
+        }
+    });
+}

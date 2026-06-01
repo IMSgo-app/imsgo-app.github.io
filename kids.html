@@ -22,12 +22,22 @@
     <div class="kids-page-shell">
         <header class="kids-page-topbar">
             <a class="brand" href="index.html">IMS Go</a>
-            <nav class="kids-page-nav" aria-label="Altersgruppen Navigation">
-                <a href="#age-2-3">2-3 Jahre</a>
-                <a href="#age-4-6">4-6 Jahre</a>
-                <a href="#age-7-11">7-11 Jahre</a>
-            </nav>
-            <a class="kids-page-back" href="index.html">Zurück zur Startseite</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="kids-menu">
+                <span class="menu-toggle-label">Menü</span>
+                <span class="menu-toggle-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <div class="topbar-menu" id="kids-menu">
+                <nav class="kids-page-nav" aria-label="Altersgruppen Navigation">
+                    <a href="#age-2-3">2-3 Jahre</a>
+                    <a href="#age-4-6">4-6 Jahre</a>
+                    <a href="#age-7-11">7-11 Jahre</a>
+                </nav>
+                <a class="kids-page-back" href="index.html">Zurück zur Startseite</a>
+            </div>
         </header>
 
         <main>
