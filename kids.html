@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#ff9800">
     <title>Kids | IMS Go Hörspiele</title>
     <meta
         name="description"
         content="Kostenlose Hörspiele für stotternde Kinder. Direkt anhören oder herunterladen, sortiert nach Altersgruppen und Techniken."
     >
+    <link rel="canonical" href="https://imsgo-app.github.io/kids.html">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imsgo-app.github.io/kids.html">
     <meta property="og:title" content="IMS Go Kids - Hörspiele für Kinder">
     <meta
         property="og:description"
         content="Die Kids-Seite von IMS Go mit kostenlosen Hörspielen zum direkten Anhören und Herunterladen."
     >
-    <meta property="og:image" content="https://jddark8.github.io/assets/images/ims-go-logo.png">
+    <meta property="og:image" content="https://imsgo-app.github.io/assets/images/ims-go-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="assets/images/ims-go-logo.png" type="image/png">
-    <link rel="stylesheet" href="styles.css?v=20260601d">
+    <link rel="stylesheet" href="styles.css?v=20260615b">
 </head>
 <body>
     <div class="kids-page-shell">
         <header class="kids-page-topbar">
-            <a class="brand" href="index.html">IMS Go</a>
+            <a class="brand" href="index.html">
+                <img src="assets/images/ims-go-logo.png" alt="" class="brand-logo" width="32" height="32">
+                <span class="brand-name">IMS Go</span>
+            </a>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="kids-menu">
                 <span class="menu-toggle-label">Menü</span>
                 <span class="menu-toggle-icon" aria-hidden="true">
@@ -31,11 +38,13 @@
                 </span>
             </button>
             <div class="topbar-menu" id="kids-menu">
-                <nav class="kids-page-nav" aria-label="Altersgruppen Navigation">
-                    <a href="#age-2-3">2-3 Jahre</a>
-                    <a href="#age-4-6">4-6 Jahre</a>
-                    <a href="#age-7-11">7-11 Jahre</a>
+                <nav class="kids-page-nav" aria-label="Seitennavigation">
+                    <a href="kids.html">Hörbücher für Kinder</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#about">Über IMS Go</a>
+                    <a href="index.html#team">Team</a>
                 </nav>
+                <a href="mailto:imsgo@gmx.de" class="nav-link">Fragen? Kontaktieren Sie uns</a>
             </div>
         </header>
 
@@ -44,11 +53,21 @@
                 <div class="kids-hero-main">
                     <p class="eyebrow">Kids Hörspiele</p>
                     <h1>Hören, mitmachen, wiederholen.</h1>
+                    <p class="kids-hero-copy">
+                        Kostenlose Hörgeschichten für stotternde Kinder – direkt anhören oder
+                        herunterladen, liebevoll sortiert nach Alter und Sprechtechnik.
+                    </p>
                     <div class="kids-hero-points">
                         <span>29 Hörspiele</span>
                         <span>Mit Audio-Player</span>
                         <span>Kostenloser Download</span>
                     </div>
+                    <a href="#age-2-3" class="kids-hero-cta">Jetzt entdecken</a>
+                </div>
+                <div class="kids-hero-covers" aria-hidden="true">
+                    <img src="assets/covers/cover-7-11.svg" alt="" class="kids-hero-cover kids-hero-cover-3" width="640" height="640" loading="lazy">
+                    <img src="assets/covers/cover-4-6.svg" alt="" class="kids-hero-cover kids-hero-cover-2" width="640" height="640" loading="lazy">
+                    <img src="assets/covers/cover-2-3.svg" alt="" class="kids-hero-cover kids-hero-cover-1" width="640" height="640">
                 </div>
             </section>
 
@@ -69,7 +88,7 @@
         </footer>
     </div>
 
-    <script src="audio-library.js?v=20260601d"></script>
-    <script src="kids.js?v=20260601d"></script>
+    <script src="audio-library.js?v=20260615b"></script>
+    <script src="kids.js?v=20260615b"></script>
 </body>
 </html>

@@ -136,15 +136,18 @@ function renderKidsPageLibrary() {
                         .map((item) => {
                             const firstSourcePath = encodeURI(item.paths[0]);
                             const sourceMimeType = getAudioMimeType(item.paths[0]);
-                            const coverImagePath = encodeURI(ageGroup.coverImage);
-                            const chapterInfo = item.isMergedStory ? `<p class="kids-track-description">Alle ${item.paths.length} Kapitel werden automatisch nacheinander abgespielt.</p>` : '';
+                            const chapterInfo = item.isMergedStory ? `<p class="kids-track-note">Alle ${item.paths.length} Kapitel werden automatisch nacheinander abgespielt.</p>` : '';
                             const playlistData = item.paths.map((path) => path.replace(/"/g, '&quot;'));
 
                             return `
                                 <article class="kids-track-card reveal">
-                                    <div class="kids-track-cover kids-track-cover-${ageGroup.ageKey}">
-                                        <img class="kids-track-cover-art" src="${coverImagePath}" alt="Cover für ${ageGroup.ageGroup}">
-                                    </div>
+                                    <span class="kids-track-icon kids-track-icon-${ageGroup.ageKey}" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9 18V5l12-2v13"></path>
+                                            <circle cx="6" cy="18" r="3"></circle>
+                                            <circle cx="18" cy="16" r="3"></circle>
+                                        </svg>
+                                    </span>
                                     <div class="kids-track-body">
                                         <h3 class="kids-track-title">${item.title}</h3>
                                         ${chapterInfo}
@@ -180,12 +183,15 @@ function renderKidsPageLibrary() {
                     <details class="kids-age-disclosure">
                         <summary class="kids-age-summary">
                             <div class="kids-age-summary-main">
-                                <div>
+                                <div class="kids-age-cover kids-age-cover-${ageGroup.ageKey}">
+                                    <img src="${encodeURI(ageGroup.coverImage)}" alt="Cover für ${ageGroup.ageGroup}" width="640" height="640" loading="lazy">
+                                </div>
+                                <div class="kids-age-summary-text">
                                     <h2>${ageGroup.ageGroup}</h2>
                                     <p class="kids-track-description">${ageGroup.description}</p>
-                                </div>
-                                <div class="kids-age-chip-row">
-                                    ${groupLabels}
+                                    <div class="kids-age-chip-row">
+                                        ${groupLabels}
+                                    </div>
                                 </div>
                             </div>
                             <div class="kids-age-summary-side">
@@ -250,7 +256,7 @@ if (kidsTopbar && kidsMenuToggle) {
         kidsMenuToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
     });
 
-    kidsTopbar.querySelectorAll('.kids-page-nav a').forEach((link) => {
+    kidsTopbar.querySelectorAll('.kids-page-nav a, .nav-link').forEach((link) => {
         link.addEventListener('click', closeMenu);
     });
 
