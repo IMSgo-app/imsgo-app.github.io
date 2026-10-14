@@ -2,93 +2,304 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#ff9800">
-    <title>Kids | IMS Go Hörspiele</title>
+    <title>Hörspiele für stotternde Kinder | IMS Go</title>
     <meta
         name="description"
-        content="Kostenlose Hörspiele für stotternde Kinder. Direkt anhören oder herunterladen, sortiert nach Altersgruppen und Techniken."
+        content="Kostenlose Hörspiele für stotternde Kinder von 2 bis 11 Jahren – direkt anhören oder herunterladen, mit Sprechtechniken oder Pseudostottern."
     >
     <link rel="canonical" href="https://imsgo-app.github.io/kids.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://imsgo-app.github.io/kids.html">
-    <meta property="og:title" content="IMS Go Kids - Hörspiele für Kinder">
+    <meta property="og:title" content="IMS Go Kids – Hörspiele für stotternde Kinder">
     <meta
         property="og:description"
-        content="Die Kids-Seite von IMS Go mit kostenlosen Hörspielen zum direkten Anhören und Herunterladen."
+        content="Kostenlose Hörspiele für stotternde Kinder zum direkten Anhören und Herunterladen."
     >
     <meta property="og:image" content="https://imsgo-app.github.io/assets/images/ims-go-logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="assets/images/ims-go-logo.png" type="image/png">
-    <link rel="stylesheet" href="styles.css?v=20260615b">
+    <link rel="icon" href="assets/images/ims-go-logo-64.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css?v=20261014">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <div class="kids-page-shell">
-        <header class="kids-page-topbar">
-            <a class="brand" href="index.html">
-                <img src="assets/images/ims-go-logo.png" alt="" class="brand-logo" width="32" height="32">
-                <span class="brand-name">IMS Go</span>
-            </a>
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="kids-menu">
-                <span class="menu-toggle-label">Menü</span>
-                <span class="menu-toggle-icon" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </button>
-            <div class="topbar-menu" id="kids-menu">
-                <nav class="kids-page-nav" aria-label="Seitennavigation">
-                    <a href="kids.html">Hörbücher für Kinder</a>
-                    <a href="index.html#features">Features</a>
-                    <a href="index.html#about">Über IMS Go</a>
-                    <a href="index.html#team">Team</a>
-                </nav>
-                <a href="mailto:imsgo@gmx.de" class="nav-link">Fragen? Kontaktieren Sie uns</a>
-            </div>
-        </header>
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <img src="assets/images/ims-go-logo-64.png" alt="" class="brand-logo" width="32" height="32">
+            <span class="brand-name">IMS Go</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+            <span class="menu-toggle-label">Menü</span>
+            <span class="menu-toggle-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <div class="topbar-menu" id="site-menu">
+            <nav class="nav-links" aria-label="Seitennavigation">
+                <a href="kids.html" aria-current="page">Hörspiele für Kinder</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#about">Über IMS Go</a>
+                <a href="index.html#team">Team</a>
+            </nav>
+            <a href="mailto:imsgo@gmx.de" class="nav-link">Fragen? Schreib uns</a>
+        </div>
+    </header>
 
-        <main>
-            <section class="kids-hero reveal">
-                <div class="kids-hero-main">
-                    <p class="eyebrow">Kids Hörspiele</p>
-                    <h1>Hören, mitmachen, wiederholen.</h1>
-                    <p class="kids-hero-copy">
-                        Kostenlose Hörgeschichten für stotternde Kinder – direkt anhören oder
-                        herunterladen, liebevoll sortiert nach Alter und Sprechtechnik.
-                    </p>
-                    <div class="kids-hero-points">
-                        <span>29 Hörspiele</span>
-                        <span>Mit Audio-Player</span>
-                        <span>Kostenloser Download</span>
+    <main class="kids-main">
+        <section class="kids-hero">
+            <div class="kids-hero-main reveal">
+                <p class="eyebrow">IMS Go Kids</p>
+                <h1>Hören, mitmachen, wiederholen.</h1>
+                <p class="kids-hero-copy">
+                    Kostenlose Hörgeschichten für stotternde Kinder – direkt anhören oder
+                    herunterladen, liebevoll sortiert nach Alter und Sprechtechnik.
+                </p>
+                <div class="kids-hero-points">
+                    <span>10 Geschichten</span>
+                    <span>Für 2–11 Jahre</span>
+                    <span>Kostenlos &amp; ohne Anmeldung</span>
+                </div>
+                <a href="#hoerspiele" class="button-dark">Jetzt anhören</a>
+            </div>
+            <div class="kids-hero-covers" aria-hidden="true">
+                <img src="assets/covers/cover-7-11.svg" alt="" class="kids-hero-cover kids-hero-cover-3" width="640" height="640">
+                <img src="assets/covers/cover-4-6.svg" alt="" class="kids-hero-cover kids-hero-cover-2" width="640" height="640">
+                <img src="assets/covers/cover-2-3.svg" alt="" class="kids-hero-cover kids-hero-cover-1" width="640" height="640">
+            </div>
+        </section>
+
+        <section class="kids-library" id="hoerspiele" aria-labelledby="hoerspiele-title">
+            <div class="kids-library-head">
+                <p class="eyebrow">Hörspiele</p>
+                <h2 id="hoerspiele-title">Wie alt ist dein Kind?</h2>
+            </div>
+
+            <nav class="kids-tabs" aria-label="Altersgruppe wählen">
+                <a class="kids-tab kids-tab-2-3" id="tab-2-3" href="#age-2-3" data-age="2-3">
+                    <img src="assets/covers/cover-2-3.svg" alt="" width="48" height="48">
+                    <span class="kids-tab-text"><strong>2–3 Jahre</strong><small>5 Geschichten</small></span>
+                </a>
+                <a class="kids-tab kids-tab-4-6" id="tab-4-6" href="#age-4-6" data-age="4-6">
+                    <img src="assets/covers/cover-4-6.svg" alt="" width="48" height="48">
+                    <span class="kids-tab-text"><strong>4–6 Jahre</strong><small>1 Geschichte</small></span>
+                </a>
+                <a class="kids-tab kids-tab-7-11" id="tab-7-11" href="#age-7-11" data-age="7-11">
+                    <img src="assets/covers/cover-7-11.svg" alt="" width="48" height="48">
+                    <span class="kids-tab-text"><strong>7–11 Jahre</strong><small>4 Geschichten</small></span>
+                </a>
+            </nav>
+
+            <div class="kids-explainer">
+                <div class="kids-explainer-item">
+                    <h3>Version „Techniken“</h3>
+                    <p>Die Figuren nutzen Sprechtechniken. Dein Kind lernt, sie wiederzuerkennen und im Alltag einzubetten.</p>
+                </div>
+                <div class="kids-explainer-item">
+                    <h3>Version „Pseudostottern“</h3>
+                    <p>Die Figuren stottern absichtlich und locker. So wird Stottern spielerisch und behutsam erlebbar.</p>
+                </div>
+                <p class="kids-explainer-note">Welche Version gerade passt, besprecht ihr am besten mit eurer Logopädin oder eurem Logopäden.</p>
+            </div>
+
+            <section class="kids-age kids-age-2-3" id="age-2-3" aria-labelledby="age-2-3-title">
+                <div class="kids-age-head">
+                    <img class="kids-age-cover" src="assets/covers/cover-2-3.svg" alt="" width="88" height="88" loading="lazy">
+                    <div>
+                        <h2 id="age-2-3-title">2–3 Jahre · Lars-Geschichten</h2>
+                        <p>Kurze Alltagsgeschichten mit ruhigem Einstieg und klaren Wiederholungen.</p>
                     </div>
-                    <a href="#age-2-3" class="kids-hero-cta">Jetzt entdecken</a>
                 </div>
-                <div class="kids-hero-covers" aria-hidden="true">
-                    <img src="assets/covers/cover-7-11.svg" alt="" class="kids-hero-cover kids-hero-cover-3" width="640" height="640" loading="lazy">
-                    <img src="assets/covers/cover-4-6.svg" alt="" class="kids-hero-cover kids-hero-cover-2" width="640" height="640" loading="lazy">
-                    <img src="assets/covers/cover-2-3.svg" alt="" class="kids-hero-cover kids-hero-cover-1" width="640" height="640">
-                </div>
+                <ol class="kids-story-list">
+                    <li class="kids-story" data-title="Lars besucht O-o-o-oma" data-age-label="2–3 Jahre" data-cover="assets/covers/cover-2-3.svg" data-src="audio/2-3/lars-besucht-oma.m4a">
+                        <button class="kids-play" type="button" aria-label="„Lars besucht O-o-o-oma“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>Lars besucht O-o-o-oma</h3>
+                            <p class="kids-story-meta" data-meta>2 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/2-3/lars-besucht-oma.m4a" download aria-label="„Lars besucht O-o-o-oma“ herunterladen (1,2 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>1,2 MB</span></a>
+                    </li>
+                    <li class="kids-story" data-title="Lars geht schla-schla-schla-schlafen" data-age-label="2–3 Jahre" data-cover="assets/covers/cover-2-3.svg" data-src="audio/2-3/lars-geht-schlafen.m4a">
+                        <button class="kids-play" type="button" aria-label="„Lars geht schla-schla-schla-schlafen“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>Lars geht schla-schla-schla-schlafen</h3>
+                            <p class="kids-story-meta" data-meta>2 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/2-3/lars-geht-schlafen.m4a" download aria-label="„Lars geht schla-schla-schla-schlafen“ herunterladen (1,2 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>1,2 MB</span></a>
+                    </li>
+                    <li class="kids-story" data-title="Lars hilft beim Ei-ei-ei-einkaufen" data-age-label="2–3 Jahre" data-cover="assets/covers/cover-2-3.svg" data-src="audio/2-3/lars-hilft-beim-einkaufen.m4a">
+                        <button class="kids-play" type="button" aria-label="„Lars hilft beim Ei-ei-ei-einkaufen“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>Lars hilft beim Ei-ei-ei-einkaufen</h3>
+                            <p class="kids-story-meta" data-meta>2 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/2-3/lars-hilft-beim-einkaufen.m4a" download aria-label="„Lars hilft beim Ei-ei-ei-einkaufen“ herunterladen (1,2 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>1,2 MB</span></a>
+                    </li>
+                    <li class="kids-story" data-title="La-la-la-lars und der Regentag" data-age-label="2–3 Jahre" data-cover="assets/covers/cover-2-3.svg" data-src="audio/2-3/lars-und-der-regentag.m4a">
+                        <button class="kids-play" type="button" aria-label="„La-la-la-lars und der Regentag“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>La-la-la-lars und der Regentag</h3>
+                            <p class="kids-story-meta" data-meta>2 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/2-3/lars-und-der-regentag.m4a" download aria-label="„La-la-la-lars und der Regentag“ herunterladen (1,4 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>1,4 MB</span></a>
+                    </li>
+                    <li class="kids-story" data-title="Ein Tag auf dem Spie-spi-spi-spielplatz" data-age-label="2–3 Jahre" data-cover="assets/covers/cover-2-3.svg" data-src="audio/2-3/ein-tag-auf-dem-spielplatz.m4a">
+                        <button class="kids-play" type="button" aria-label="„Ein Tag auf dem Spie-spi-spi-spielplatz“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>Ein Tag auf dem Spie-spi-spi-spielplatz</h3>
+                            <p class="kids-story-meta" data-meta>2 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/2-3/ein-tag-auf-dem-spielplatz.m4a" download aria-label="„Ein Tag auf dem Spie-spi-spi-spielplatz“ herunterladen (1,6 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>1,6 MB</span></a>
+                    </li>
+                </ol>
             </section>
 
-            <section id="kids-page-library" class="kids-page-library" aria-live="polite"></section>
-        </main>
+            <section class="kids-age kids-age-4-6" id="age-4-6" aria-labelledby="age-4-6-title">
+                <div class="kids-age-head">
+                    <img class="kids-age-cover" src="assets/covers/cover-4-6.svg" alt="" width="88" height="88" loading="lazy">
+                    <div>
+                        <h2 id="age-4-6-title">4–6 Jahre · Tiergeschichte</h2>
+                        <p>Eine Tiergeschichte in 8 Kapiteln mit wiederkehrenden Figuren – mit Techniken oder Pseudostottern.</p>
+                    </div>
+                </div>
+                <ol class="kids-story-list">
+                    <li class="kids-story" data-title="Flora und die Tiere" data-age-label="4–6 Jahre" data-cover="assets/covers/cover-4-6.svg">
+                        <button class="kids-play" type="button" aria-label="„Flora und die Tiere“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>Flora und die Tiere</h3>
+                            <p class="kids-story-meta" data-meta>8 Kapitel · 14 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/4-6/flora-techniken.m4a" download aria-label="„Flora und die Tiere“ herunterladen (10,0 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>10,0 MB</span></a>
+                        <div class="kids-version" role="group" aria-label="Version von „Flora und die Tiere“">
+                            <button type="button" data-version="Techniken" data-src="audio/4-6/flora-techniken.m4a" data-dur="817" data-mb="10.0" data-chapters="[0.0, 33.95, 144.82, 247.49, 402.03, 477.54, 642.6, 765.48]" aria-pressed="true">Techniken</button>
+                            <button type="button" data-version="Pseudostottern" data-src="audio/4-6/flora-pseudostottern.m4a" data-dur="946" data-mb="11.5" data-chapters="[0.0, 42.14, 164.44, 299.65, 463.98, 560.25, 764.82, 892.69]" aria-pressed="false">Pseudostottern</button>
+                        </div>
+                        <details class="kids-chapters">
+                            <summary>Kapitel anzeigen</summary>
+                            <ol>
+                                <li><button type="button" class="kids-chapter" data-chapter="0"><span class="kids-chapter-name">Flora</span><span class="kids-chapter-time">0:00</span></button></li>
+                                <li><button type="button" class="kids-chapter" data-chapter="1"><span class="kids-chapter-name">Die Braunbärin</span><span class="kids-chapter-time">0:33</span></button></li>
+                                <li><button type="button" class="kids-chapter" data-chapter="2"><span class="kids-chapter-name">Die Schwalbe</span><span class="kids-chapter-time">2:24</span></button></li>
+                                <li><button type="button" class="kids-chapter" data-chapter="3"><span class="kids-chapter-name">Die Luchsin</span><span class="kids-chapter-time">4:07</span></button></li>
+                                <li><button type="button" class="kids-chapter" data-chapter="4"><span class="kids-chapter-name">Die Papageien-Dame</span><span class="kids-chapter-time">6:42</span></button></li>
+                                <li><button type="button" class="kids-chapter" data-chapter="5"><span class="kids-chapter-name">Das Reh</span><span class="kids-chapter-time">7:57</span></button></li>
+                                <li><button type="button" class="kids-chapter" data-chapter="6"><span class="kids-chapter-name">Die Häsin</span><span class="kids-chapter-time">10:42</span></button></li>
+                                <li><button type="button" class="kids-chapter" data-chapter="7"><span class="kids-chapter-name">Zuhause</span><span class="kids-chapter-time">12:45</span></button></li>
+                            </ol>
+                        </details>
+                    </li>
+                </ol>
+            </section>
 
-        <footer class="footer">
-            <div class="footer-links">
-                <a href="index.html">Startseite</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-                <a href="mailto:imsgo@gmx.de">Kontakt</a>
+            <section class="kids-age kids-age-7-11" id="age-7-11" aria-labelledby="age-7-11-title">
+                <div class="kids-age-head">
+                    <img class="kids-age-cover" src="assets/covers/cover-7-11.svg" alt="" width="88" height="88" loading="lazy">
+                    <div>
+                        <h2 id="age-7-11-title">7–11 Jahre · Abenteuer-Hörspiele</h2>
+                        <p>Abenteuerliche Geschichten für ältere Kinder mit klaren Übungsmomenten.</p>
+                    </div>
+                </div>
+                <ol class="kids-story-list">
+                    <li class="kids-story" data-title="Die Uhr" data-age-label="7–11 Jahre" data-cover="assets/covers/cover-7-11.svg">
+                        <button class="kids-play" type="button" aria-label="„Die Uhr“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>Die Uhr</h3>
+                            <p class="kids-story-meta" data-meta>3 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/7-11/die-uhr-techniken.m4a" download aria-label="„Die Uhr“ herunterladen (2,4 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>2,4 MB</span></a>
+                        <div class="kids-version" role="group" aria-label="Version von „Die Uhr“">
+                            <button type="button" data-version="Techniken" data-src="audio/7-11/die-uhr-techniken.m4a" data-dur="200" data-mb="2.4" aria-pressed="true">Techniken</button>
+                            <button type="button" data-version="Pseudostottern" data-src="audio/7-11/die-uhr-pseudostottern.m4a" data-dur="236" data-mb="2.9" aria-pressed="false">Pseudostottern</button>
+                        </div>
+                    </li>
+                    <li class="kids-story" data-title="Das verlassene Boot am See" data-age-label="7–11 Jahre" data-cover="assets/covers/cover-7-11.svg">
+                        <button class="kids-play" type="button" aria-label="„Das verlassene Boot am See“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>Das verlassene Boot am See</h3>
+                            <p class="kids-story-meta" data-meta>3 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/7-11/das-verlassene-boot-techniken.m4a" download aria-label="„Das verlassene Boot am See“ herunterladen (2,1 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>2,1 MB</span></a>
+                        <div class="kids-version" role="group" aria-label="Version von „Das verlassene Boot am See“">
+                            <button type="button" data-version="Techniken" data-src="audio/7-11/das-verlassene-boot-techniken.m4a" data-dur="170" data-mb="2.1" aria-pressed="true">Techniken</button>
+                            <button type="button" data-version="Pseudostottern" data-src="audio/7-11/das-verlassene-boot-pseudostottern.m4a" data-dur="190" data-mb="2.3" aria-pressed="false">Pseudostottern</button>
+                        </div>
+                    </li>
+                    <li class="kids-story" data-title="Die geheime Tür" data-age-label="7–11 Jahre" data-cover="assets/covers/cover-7-11.svg">
+                        <button class="kids-play" type="button" aria-label="„Die geheime Tür“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>Die geheime Tür</h3>
+                            <p class="kids-story-meta" data-meta>4 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/7-11/die-geheime-tuer-techniken.m4a" download aria-label="„Die geheime Tür“ herunterladen (2,9 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>2,9 MB</span></a>
+                        <div class="kids-version" role="group" aria-label="Version von „Die geheime Tür“">
+                            <button type="button" data-version="Techniken" data-src="audio/7-11/die-geheime-tuer-techniken.m4a" data-dur="238" data-mb="2.9" aria-pressed="true">Techniken</button>
+                            <button type="button" data-version="Pseudostottern" data-src="audio/7-11/die-geheime-tuer-pseudostottern.m4a" data-dur="230" data-mb="2.8" aria-pressed="false">Pseudostottern</button>
+                        </div>
+                    </li>
+                    <li class="kids-story" data-title="Der Zauberstift" data-age-label="7–11 Jahre" data-cover="assets/covers/cover-7-11.svg">
+                        <button class="kids-play" type="button" aria-label="„Der Zauberstift“ abspielen"><svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg></button>
+                        <div class="kids-story-text">
+                            <h3>Der Zauberstift</h3>
+                            <p class="kids-story-meta" data-meta>2 Min.</p>
+                        </div>
+                        <a class="kids-download" href="audio/7-11/der-zauberstift-techniken.m4a" download aria-label="„Der Zauberstift“ herunterladen (1,6 MB)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg><span data-size>1,6 MB</span></a>
+                        <div class="kids-version" role="group" aria-label="Version von „Der Zauberstift“">
+                            <button type="button" data-version="Techniken" data-src="audio/7-11/der-zauberstift-techniken.m4a" data-dur="129" data-mb="1.6" aria-pressed="true">Techniken</button>
+                            <button type="button" data-version="Pseudostottern" data-src="audio/7-11/der-zauberstift-pseudostottern.m4a" data-dur="139" data-mb="1.7" aria-pressed="false">Pseudostottern</button>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="index.html">Startseite</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="mailto:imsgo@gmx.de">Kontakt</a>
+        </div>
+        <p class="copyright">
+            Kids-Bereich von IMS Go<br>
+            © <span id="year"></span> Alle Rechte vorbehalten.
+        </p>
+    </footer>
+
+    <div class="kids-player" id="kids-player" role="region" aria-label="Audio-Player" hidden>
+        <div class="kids-player-inner">
+            <img class="kids-player-cover" src="assets/covers/cover-2-3.svg" alt="" width="48" height="48">
+            <div class="kids-player-info">
+                <p class="kids-player-title" data-player-title></p>
+                <p class="kids-player-sub" data-player-sub></p>
             </div>
-            <p class="copyright">
-                Kids-Bereich von IMS Go<br>
-                © <span id="year"></span> Alle Rechte vorbehalten.
-            </p>
-        </footer>
+            <div class="kids-player-controls">
+                <button type="button" class="kids-player-btn" data-action="back" aria-label="15 Sekunden zurück">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.34-5.66"/><path d="M4 3v4h4"/></svg>
+                </button>
+                <button type="button" class="kids-player-btn kids-player-toggle" data-action="toggle" aria-label="Abspielen">
+                    <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg><svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></svg>
+                </button>
+                <button type="button" class="kids-player-btn" data-action="forward" aria-label="15 Sekunden vor">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 3v4h-4"/></svg>
+                </button>
+            </div>
+            <div class="kids-player-progress">
+                <span class="kids-player-time" data-time-current>0:00</span>
+                <input type="range" class="kids-player-seek" min="0" max="100" step="1" value="0" aria-label="Position im Hörspiel">
+                <span class="kids-player-time" data-time-total>0:00</span>
+            </div>
+            <button type="button" class="kids-player-close" data-action="close" aria-label="Player schließen">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+            </button>
+        </div>
+        <audio preload="metadata"></audio>
     </div>
 
-    <script src="audio-library.js?v=20260615b"></script>
-    <script src="kids.js?v=20260615b"></script>
+    <script src="script.js?v=20261014"></script>
+    <script src="kids.js?v=20261014"></script>
 </body>
 </html>

@@ -2,12 +2,15 @@ const yearTarget = document.querySelector('#year');
 const revealNodes = document.querySelectorAll('.reveal');
 const topbar = document.querySelector('.topbar');
 const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenuQuery = window.matchMedia('(max-width: 960px)');
 
 if (yearTarget) {
     yearTarget.textContent = String(new Date().getFullYear());
 }
 
-revealNodes.forEach((node) => node.classList.add('is-visible'));
+requestAnimationFrame(() => {
+    revealNodes.forEach((node) => node.classList.add('is-visible'));
+});
 
 if (topbar && menuToggle) {
     const closeMenu = () => {
@@ -32,8 +35,15 @@ if (topbar && menuToggle) {
         }
     });
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 760) {
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && topbar.classList.contains('menu-open')) {
+            closeMenu();
+            menuToggle.focus();
+        }
+    });
+
+    mobileMenuQuery.addEventListener('change', (event) => {
+        if (!event.matches) {
             closeMenu();
         }
     });

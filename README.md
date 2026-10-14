@@ -1,25 +1,35 @@
-# JDDark8.github.io
+# IMS Go Website
 
-Einfache statische Website fuer GitHub Pages.
+Statische Website für GitHub Pages: https://imsgo-app.github.io
 
-## Lokal bearbeiten
+## Dateien
 
-Oeffne das Repo in VS Code und bearbeite diese Dateien:
+- `index.html` – Startseite
+- `kids.html` – Hörspiele für Kinder (statisches HTML, Player-Logik in `kids.js`)
+- `impressum.html`, `datenschutz.html` – Rechtliches
+- `styles.css` – gemeinsames Design
+- `script.js` – Menü und kleine Interaktionen (alle Seiten)
+- `audio/` – komprimierte Hörspiele (AAC/M4A, 96 kbit/s)
 
-- `index.html` fuer Inhalte
-- `styles.css` fuer Design
-- `script.js` fuer kleine Interaktionen
+## Neues Hörspiel hinzufügen
 
-## GitHub Pages aktivieren
+1. WAV-Datei komprimieren (macOS, ohne Zusatzsoftware):
 
-1. Aendere deine Dateien.
-2. Fuehre `git add .` aus.
-3. Fuehre `git commit -m "Initial website"` aus.
-4. Fuehre `git push origin main` aus.
-5. Gehe auf GitHub in die Repository Settings.
-6. Oeffne den Bereich `Pages`.
-7. Waehle bei `Build and deployment` die Option `Deploy from a branch`.
-8. Waehle Branch `main` und Ordner `/ (root)`.
-9. Speichere die Einstellung.
+   ```sh
+   afconvert -f m4af -d aac -b 96000 "Original.wav" audio/7-11/neuer-titel-techniken.m4a
+   afinfo audio/7-11/neuer-titel-techniken.m4a | grep duration
+   ```
 
-Danach ist deine Seite unter `https://jddark8.github.io` erreichbar.
+2. In `kids.html` einen bestehenden `<li class="kids-story">` kopieren und Titel,
+   `data-src`/`href`, Laufzeit (`data-dur` in Sekunden) und Dateigröße (`data-mb`) anpassen.
+3. Bei Änderungen an CSS/JS die Versionsnummer `?v=…` in den HTML-Dateien erhöhen.
+
+Die unkomprimierten WAV-Originale liegen nicht im Repository.
+
+## Veröffentlichen
+
+```sh
+git add .
+git commit -m "Beschreibung"
+git push origin main
+```
