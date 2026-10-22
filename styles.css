@@ -341,16 +341,17 @@ button {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 28px;
+    gap: 22px;
     width: 100%;
 }
 
+/* Die Bilder enthalten Statusleiste und Dynamic Island bereits, der Rahmen ist nur das Gehäuse */
 .screenshot-wrapper {
     position: relative;
-    flex: 0 0 auto;
-    width: min(230px, 72vw);
-    padding: 6px;
-    border-radius: 34px;
+    flex: 0 1 200px;
+    min-width: 0;
+    padding: 5px;
+    border-radius: 32px;
     background: linear-gradient(160deg, #2c2c30, #141416);
     box-shadow: 0 28px 60px rgba(28, 28, 30, 0.22);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -358,19 +359,6 @@ button {
 
 .screenshot-row .screenshot-wrapper:nth-child(odd) {
     margin-top: 30px;
-}
-
-.screenshot-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 34%;
-    height: 12px;
-    border-radius: 0 0 12px 12px;
-    background: #141416;
-    z-index: 2;
 }
 
 @media (hover: hover) {
@@ -381,7 +369,7 @@ button {
 }
 
 .screenshot-img {
-    border-radius: 30px;
+    border-radius: 27px;
 }
 
 /* ---------- Section headings & grids ---------- */
@@ -425,6 +413,13 @@ button {
 
 .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+/* Vier Feature-Karten: 2 × 2 statt 3 + 1 auf mittleren Breiten */
+@media (min-width: 561px) and (max-width: 1060px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .feature-card,
@@ -485,6 +480,11 @@ button {
 .icon-orange {
     color: var(--primary-orange);
     background: rgba(255, 152, 0, 0.14);
+}
+
+.icon-teal {
+    color: var(--brand-blue);
+    background: rgba(48, 110, 127, 0.12);
 }
 
 .feature-card h3,
@@ -680,6 +680,11 @@ button {
     max-width: 700px;
     margin: 16px auto 0;
     color: var(--text-light);
+}
+
+.download-panel .download-note {
+    margin-top: 10px;
+    font-size: 15px;
 }
 
 .store-buttons-centered {
@@ -1640,6 +1645,7 @@ body.has-player {
     }
 
     .screenshot-wrapper {
+        flex: 0 0 auto;
         width: min(62vw, 230px);
         scroll-snap-align: center;
     }
