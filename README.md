@@ -11,6 +11,8 @@ Jeder Push auf `main` ist nach etwa einer Minute live.
 |---|---|
 | `index.html` | Startseite (App, Features, Hörspiel-Teaser, Team, Download) |
 | `kids.html` | Hörspiele für Kinder – alle Geschichten stehen direkt im HTML |
+| `pseudostottern.html`, `ims-phasen.html`, `mutleiter.html`, `logopaedie.html` | Wissensseiten, von der Startseite (Abschnitt „Wissen“) und im Footer verlinkt |
+| `404.html` | Seite für falsche Links – nutzt Pfade ab der Wurzel (`/styles.css`), weil GitHub Pages sie für jeden Pfad ausliefert |
 | `impressum.html`, `datenschutz.html` | Rechtliches |
 | `styles.css` | Gemeinsames Design für alle Seiten |
 | `script.js` | Menü, Jahreszahl im Footer, Einblend-Animation (alle Seiten) |
@@ -115,6 +117,10 @@ Versions-Button, die Kapitelnamen in die Liste `<details class="kids-chapters">`
 
 - `kids.html`: „10 Geschichten“ im Hero und „5 Geschichten“ usw. in den Tabs
 - `index.html`: Texte der drei Hörspiel-Karten im Abschnitt „Hörspiele für stotternde Kinder“
+- `pseudostottern.html`: „Fünf unserer Hörspiele“, `logopaedie.html`: „10 kostenlose Hörspiele“
+
+**5. Strukturierte Daten ergänzen:** In `kids.html` steht im `<head>` pro Audiodatei ein `AudioObject`
+(JSON-LD). Dort Name, Pfad, Dauer (`PT3M20S`) und Altersgruppe eintragen.
 
 ## Preise
 

@@ -792,7 +792,8 @@ button {
     font-size: 1.2rem;
 }
 
-.legal-card a {
+.legal-card a,
+.kids-explainer-note a {
     text-decoration: underline;
 }
 
@@ -808,6 +809,99 @@ button {
 
 .legal-section-block + .legal-section-block {
     margin-top: 18px;
+}
+
+/* ---------- Wissensseiten ---------- */
+
+.article-main {
+    width: min(760px, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 40px 0 24px;
+}
+
+.article h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.05;
+}
+
+.article h2 {
+    margin: 40px 0 10px;
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    line-height: 1.2;
+}
+
+.article p,
+.article li {
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.article li + li {
+    margin-top: 8px;
+}
+
+.article strong {
+    color: var(--text-dark);
+}
+
+.article a {
+    text-decoration: underline;
+}
+
+.article .article-lead {
+    margin: 18px 0 0;
+    color: var(--text-dark);
+    font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+    line-height: 1.55;
+}
+
+.article .article-byline {
+    margin: 16px 0 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.article-figure {
+    width: min(240px, 70%);
+    margin: 28px auto;
+}
+
+.article-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+.article-sources {
+    margin-top: 48px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+}
+
+.article .article-sources h2 {
+    margin-top: 16px;
+    font-size: 1.1rem;
+}
+
+.article .article-sources li {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.article-section {
+    margin-top: 48px;
+}
+
+.article-section .download-panel h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+}
+
+.article-section .store-buttons {
+    margin-top: 20px;
 }
 
 /* ---------- Kids-Seite: Hero ---------- */
