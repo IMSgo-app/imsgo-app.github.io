@@ -1,6 +1,6 @@
 # IMS Go Website
 
-Statische Website für GitHub Pages: https://imsgo-app.github.io
+Statische Website für GitHub Pages: https://imsgoapp.de
 
 Kein Build-Schritt, kein Framework – einfach HTML, CSS und etwas JavaScript.
 Jeder Push auf `main` ist nach etwa einer Minute live.
@@ -19,6 +19,7 @@ Jeder Push auf `main` ist nach etwa einer Minute live.
 | `assets/images/` | Logo, App-Screenshots, Teamfotos |
 | `assets/covers/` | Cover der drei Altersgruppen (SVG) |
 | `sitemap.xml`, `robots.txt` | Für Suchmaschinen |
+| `CNAME` | Eigene Domain für GitHub Pages – nicht löschen, sonst ist `imsgoapp.de` offline |
 
 ## Hörspiele
 
@@ -140,7 +141,6 @@ Versions-Button, die Kapitelnamen in die Liste `<details class="kids-chapters">`
 - [ ] **Titel der Tiergeschichte:** „Flora und die Tiere“ ist ein Arbeitstitel.
   Den echten Titel in `kids.html` eintragen (`data-title`, `<h3>` und die `aria-label`-Texte der Karte).
 - [ ] **Erklärtext Techniken / Pseudostottern** auf der Hörspiel-Seite fachlich gegenlesen.
-- [ ] **Impressum:** Hausnummer bei der Adresse fehlt (auch in `datenschutz.html`).
 - [ ] **Auf echtem iPhone testen:** Abspielen, Sperrbildschirm-Steuerung, Download in Safari.
 - [ ] Optional: Die alten WAV-Dateien liegen noch in der Git-Historie (~670 MB).
   Die Website ist davon nicht betroffen, nur das Klonen des Repos dauert länger.

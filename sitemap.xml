@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://imsgo-app.github.io/</loc>
-        <lastmod>2026-10-22</lastmod>
+        <loc>https://imsgoapp.de/</loc>
+        <lastmod>2026-10-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://imsgo-app.github.io/kids.html</loc>
-        <lastmod>2026-10-14</lastmod>
+        <loc>https://imsgoapp.de/kids.html</loc>
+        <lastmod>2026-10-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://imsgo-app.github.io/impressum.html</loc>
-        <lastmod>2026-10-14</lastmod>
+        <loc>https://imsgoapp.de/impressum.html</loc>
+        <lastmod>2026-10-30</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
-        <loc>https://imsgo-app.github.io/datenschutz.html</loc>
-        <lastmod>2026-10-14</lastmod>
+        <loc>https://imsgoapp.de/datenschutz.html</loc>
+        <lastmod>2026-10-30</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
