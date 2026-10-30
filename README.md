@@ -116,6 +116,11 @@ Versions-Button, die Kapitelnamen in die Liste `<details class="kids-chapters">`
 - `kids.html`: „10 Geschichten“ im Hero und „5 Geschichten“ usw. in den Tabs
 - `index.html`: Texte der drei Hörspiel-Karten im Abschnitt „Hörspiele für stotternde Kinder“
 
+## Preise
+
+Die Premium-Preise stehen fest in `index.html` (Abschnitt „Über IMS Go“, Karte „Was kostet IMS Go?“).
+Ändern sie sich in den Stores, dort auch die Preise und den Stand anpassen.
+
 ## Bilder
 
 - Bilder als **WebP** in der Größe, in der sie angezeigt werden (doppelte Pixel für Retina):

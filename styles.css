@@ -392,6 +392,10 @@ button {
     line-height: 1.75;
 }
 
+.section-intro a {
+    text-decoration: underline;
+}
+
 .section-heading h2 {
     margin: 0;
     font-size: clamp(2rem, 4.5vw, 3.2rem);
@@ -417,7 +421,8 @@ button {
 
 /* Vier Feature-Karten: 2 × 2 statt 3 + 1 auf mittleren Breiten */
 @media (min-width: 561px) and (max-width: 1060px) {
-    .feature-grid {
+    .feature-grid,
+    .content-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -488,6 +493,7 @@ button {
 }
 
 .feature-card h3,
+.content-card h3,
 .team-name {
     margin: 0 0 10px;
     font-size: 22px;
@@ -833,6 +839,14 @@ button {
     font-size: clamp(2.3rem, 6vw, 4.4rem);
     line-height: 1.02;
     letter-spacing: -0.04em;
+}
+
+.kids-hero-claim {
+    margin: 16px 0 0;
+    font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-dark);
 }
 
 .kids-hero-copy {
